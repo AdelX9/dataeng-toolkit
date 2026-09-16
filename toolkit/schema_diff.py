@@ -1,12 +1,14 @@
 """Compare two PostgreSQL schemas and generate migration SQL."""
 
 from __future__ import annotations
+
 import re
 from dataclasses import dataclass, field
 from enum import Enum
 
 from sqlalchemy import text
 from sqlalchemy.engine import Engine
+
 from toolkit.db import connect
 
 

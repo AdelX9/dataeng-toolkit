@@ -1,6 +1,9 @@
 import csv
+
 import pytest
+
 from toolkit.csv_surgeon import CSVSurgeon
+
 
 @pytest.fixture
 def surgeon():

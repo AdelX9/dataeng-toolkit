@@ -1,4 +1,5 @@
-from toolkit.schema_diff import DiffType, SchemaDiffResult, TableDiff, ColumnDiff
+from toolkit.schema_diff import ColumnDiff, DiffType, SchemaDiffResult, TableDiff
+
 
 def test_empty_diff():
     r = SchemaDiffResult("pg://a", "pg://b", "public")

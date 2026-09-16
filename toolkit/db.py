@@ -1,11 +1,12 @@
 """Database connection helpers using SQLAlchemy 2.0."""
 
 from __future__ import annotations
-from contextlib import contextmanager
-from typing import Generator
 
-from sqlalchemy import create_engine, text, inspect
-from sqlalchemy.engine import Engine, Connection
+from collections.abc import Generator
+from contextlib import contextmanager
+
+from sqlalchemy import create_engine, inspect, text
+from sqlalchemy.engine import Connection, Engine
 
 
 def get_engine(url: str, echo: bool = False) -> Engine:

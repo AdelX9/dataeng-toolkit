@@ -1,6 +1,7 @@
 """CLI entry points — three subcommands: profile, diff, csv."""
 
 import sys
+
 import click
 from rich.console import Console
 
@@ -10,7 +11,6 @@ console = Console()
 @click.group()
 def cli():
     """dataeng-toolkit — PostgreSQL profiling, schema diffing, CSV fixing."""
-    pass
 
 
 @cli.command()
