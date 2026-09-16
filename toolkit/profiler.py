@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import dataclass, field, asdict
-from datetime import datetime
+from datetime import UTC, datetime
 
 from sqlalchemy import text, inspect
 from sqlalchemy.engine import Engine
@@ -136,7 +136,7 @@ class Profiler:
 
         return TableProfile(
             table_name=table, schema_name=schema, row_count=row_count,
-            column_count=len(columns_meta), profiled_at=datetime.utcnow().isoformat(),
+            column_count=len(columns_meta), profiled_at=datetime.now(UTC).isoformat(),
             columns=profiles,
         )
 

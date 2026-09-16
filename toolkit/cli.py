@@ -28,7 +28,7 @@ def profile(db, table, schema, output, top_n):
         engine = get_engine(db)
         info = test_connection(engine)
         console.print(f"[green]Connected to {info['db']}[/green]")
-    except Exception as e:
+    except (ConnectionError, OSError, ValueError) as e:
         console.print(f"[red]Connection failed: {e}[/red]")
         sys.exit(1)
 
